@@ -1,0 +1,30 @@
+div>h1,small {
+        color: aliceblue;
+        margin: 10px 0px 2px 5px;
+}
+.main-box{
+        background-color: rgb(254 254 254 / 11%);
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 10px;
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow:1px 1px 3px white ;
+}
+.icons{
+        width: 20%;
+        display: flex;
+        justify-content: space-around;
+        
+}
+.bi-pencil-fill{
+        color: rgb(232, 243, 232);
+}
+.bi-trash{
+        color: red;
+}
+
+.center{
+        top: 25%;
+        left: 35%;
+}

@@ -1,0 +1,47 @@
+.add-item-box{
+        background-color: rgb(248, 228, 228);
+        position: fixed;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-radius:20px ;
+        z-index: 10;
+        max-width: 60%;
+        min-width: 30%;
+
+}
+.add-item-box>input{
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+        margin: 10px 10px 0px 0px;
+        
+}
+
+.action-btns{
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+
+}
+
+.action-btns>button{
+        padding: 10px;
+        font-weight: bolder;
+        background-color: rgb(69, 241, 241);
+        border-radius: 10px;
+        border: none;
+}
+
+#success{
+        background-color: rgb(33, 221, 33);
+}
+#danger{
+        background-color: red;
+        margin-right: 4px;
+}
+h3{
+        text-align: center;
+        margin-top: 5px;
+}
