@@ -28,10 +28,12 @@ const Contact = ({deleteHandler, updateHandler,item,index,contacts }) => {
         <h1>{item.name}</h1>
         <small>{item.phone}</small>
       </div>
+      
       <div className="icons">
-        <h2 onClick={editBtnHandler}>
+        {/* <h2 onClick={editBtnHandler}>
           <i className="bi bi-pencil-fill"></i>
-        </h2>
+        </h2> */}
+        <div><h2>{item.description}</h2></div>
         <h2 onClick={deleteBtn}>
           <i className="bi bi-trash"></i>
         </h2>

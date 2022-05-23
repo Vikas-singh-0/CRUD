@@ -5,8 +5,6 @@ import Contact from "./Contact";
 import "./Container.css";
 
 const Container = (props) => {
- 
-
   const [add_item, setAdd_Item] = useState(false);
   const addContactHandler = () => {
     setAdd_Item(true);
@@ -22,8 +20,6 @@ const Container = (props) => {
   //   console.log("in container",data);
   // }
 
- 
-
   return (
     <>
       <div className="container">
@@ -34,13 +30,29 @@ const Container = (props) => {
           Add Item
         </button>
       </div>
-      {props.contacts.length?<div className="items">
-        {props.contacts.map((item, index) => {
-          return <Contact key={item.id} deleteHandler={props.DeleteProp} updateHandler={props.updateHandler} item={item} index={index}/>;
-        })}
-      </div>:<p>no items</p>}
+      {props.contacts.length ? (
+        <div className="items">
+          {props.contacts.map((item, index) => {
+            return (
+              <Contact
+                key={item.id}
+                deleteHandler={props.DeleteProp}
+                updateHandler={props.updateHandler}
+                item={item}
+                index={index}
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <p>no items</p>
+      )}
       {add_item && (
-        <AddItem formSubmit={props.formSubmit} contacts={props.contacts} onCloseClick={onClose} />
+        <AddItem
+          formSubmit={props.formSubmit}
+          contacts={props.contacts}
+          onCloseClick={onClose}
+        />
       )}
       {add_item && <BackDrop />}
       {/* <pre style={{color:"white"}}>{JSON.stringify(props.contacts,null,4)}</pre> */}

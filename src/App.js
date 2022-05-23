@@ -8,7 +8,7 @@ function App() {
     {
       id: 0,
       name: "Vikas",
-      description: "sescription 1",
+      description: "description 1",
       phone: "9149125239",
     },
     {
@@ -36,20 +36,17 @@ function App() {
 
   const handleDelete=(id)=>{
     setContactList((prevList)=>{
-      console.log("pre",id,prevList);
+      // console.log("pre",id,prevList);
 
       const updatedContacts = prevList.filter((e)=>e.id!=id)
       return updatedContacts})
   }
 
   const formUpdateHandler = (data)=>{
-    console.log("dddd",[data.index]);
-    let {index,...newData} = data;
-    newData = {...newData,id:data.index}
-  
-    contacts[newData.id]=newData
-    console.log("new data",newData);
-    setContactList(contacts)
+    // console.log(data);
+    setContactList(prevState => prevState.filter((item)=>{
+      // console.log("item id",item);
+    }))
   }
   return (
     <div className="main">
